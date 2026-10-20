@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import { Analytics } from "@/components/integrations/analytics";
 import { SiteFooter } from "@/components/site/site-footer";
+import { FixedTemplateFooter } from "@/components/templates/fixed-template-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { siteConfig } from "@/config/site";
 import { siteSkin } from "@/config/skin";
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <a href="#main-content" className="skip-link">Skip to content</a>
         <SiteHeader links={navLinks} />
         <div id="main-content">{children}</div>
-        {fixed ? null : <SiteFooter coreLinks={navLinks} legalLinks={legalLinks} />}
+        {fixed ? <FixedTemplateFooter /> : <SiteFooter coreLinks={navLinks} legalLinks={legalLinks} />}
       </body>
     </html>
   );

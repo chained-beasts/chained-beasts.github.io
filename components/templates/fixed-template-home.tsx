@@ -44,7 +44,7 @@ export function FixedTemplateHome({ home }: { home: HomePageDefinition }) {
       <div dangerouslySetInnerHTML={{ __html: rendered.rest }} />
       <div className="site-container"><NativeAdSlot /></div>
       {home.faq.length ? (
-        <div className="site-container"><Faq items={home.faq} /></div>
+        <div className="site-container py-12 sm:py-16"><Faq items={home.faq} /></div>
       ) : null}
     </>
   );
