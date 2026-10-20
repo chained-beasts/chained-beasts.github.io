@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "slug": "",
+  "pageType": "home",
+  "title": "Chained Beasts Guide",
+  "description": "Guides, walkthroughs, tips, updates, and reference information for Chained Beasts.",
+  "navVisible": true,
+  "hero": {
+    "eyebrow": "Game guide",
+    "heading": "Chained Beasts",
+    "lead": "Guides, walkthroughs, tips, updates, and reference information for Chained Beasts.",
+    "supportingText": "Browse current game information and practical guides.",
+    "secondaryLink": {
+      "label": "Open official game page",
+      "url": "https://store.steampowered.com/app/3569420/"
+    }
+  },
+  "sections": [
+    {
+      "id": "start-here",
+      "heading": "Game information",
+      "paragraphs": [
+        "Current Chained Beasts guides and reference information will be published here."
+      ]
+    }
+  ],
+  "faq": [],
+  "screenshots": [],
+  "lastReviewed": "2026-10-20"
+}

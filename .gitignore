@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+.DS_Store
+*.tsbuildinfo
+.playwright-cli/
+release/
+
+# Internal build research must never be committed
+*详情资料*.txt

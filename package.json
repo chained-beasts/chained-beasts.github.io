@@ -1,0 +1,31 @@
+{
+  "name": "chained-beasts-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "build": "next build --webpack && node scripts/postbuild.mjs",
+    "prepare": "node scripts/repo-rules.mjs install",
+    "check:repo-rules": "node scripts/repo-rules.mjs ci"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "next": "^16.3.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^16.3.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
