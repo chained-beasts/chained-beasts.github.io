@@ -41,6 +41,18 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run build
+      - name: Install browser QA runner
+        run: npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1
+      - name: Check mobile, tablet and desktop UI
+        run: node scripts/qa-ui.mjs
+      - name: Save UI screenshots (Actions only, not repository)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: responsive-ui-screenshots
+          path: ${{ runner.temp }}/chained-beasts-ui/
+          if-no-files-found: ignore
+          retention-days: 3
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
