@@ -52,9 +52,10 @@ export function homeSchemas(page: HomePageDefinition): Schema[] {
       genre: siteConfig.game.genre,
       gamePlatform: siteConfig.game.platform,
       author: { "@type": "Organization", name: siteConfig.game.developer },
-      url: absoluteUrl(),
+      url: siteConfig.game.officialUrl ?? absoluteUrl(),
+      sameAs: siteConfig.game.officialUrl ?? undefined,
     },
-    faqSchema(page.faq),
+    ...(page.faq.length ? [faqSchema(page.faq)] : []),
   ];
 }
 

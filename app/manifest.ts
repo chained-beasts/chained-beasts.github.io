@@ -15,7 +15,7 @@ export default function manifest(): MetadataRoute.Manifest {
   };
   const icon = siteConfig.theme.skin === "arcade-play"
     ? { src: logoSrc, ...(imageTypes[extension] ? { type: imageTypes[extension] } : {}), ...(extension === "svg" ? { sizes: "any" } : {}) }
-    : { src: logoSrc, sizes: "any", type: "image/svg+xml" };
+    : { src: logoSrc, ...(imageTypes[extension] ? { type: imageTypes[extension] } : {}), ...(extension === "svg" ? { sizes: "any" } : {}) };
   return {
     name: siteConfig.siteName,
     short_name: siteConfig.shortName,

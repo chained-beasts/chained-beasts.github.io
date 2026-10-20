@@ -1,11 +1,11 @@
 {
-  "readyForLaunch": false,
-  "siteName": "Chained Beasts Guide",
+  "readyForLaunch": true,
+  "siteName": "Chained Beasts Wiki",
   "shortName": "Chained Beasts",
-  "description": "Chained Beasts guides, walkthroughs, tips, updates, and reference information.",
+  "description": "Independent Chained Beasts wiki covering hotfix notes, beginner guides, crossplay, solo play and healing.",
   "language": "en",
   "locale": "en_US",
-  "authorName": "Editorial Team",
+  "authorName": "Chained Beasts Wiki editors",
   "theme": {
     "preset": "obsidian-red",
     "overrides": {
@@ -38,7 +38,7 @@
     "fontId": "cormorant"
   },
   "hosting": {
-    "siteUrl": "http://chained-beasts.github.io",
+    "siteUrl": "https://chained-beasts.github.io",
     "basePath": "",
     "customDomain": null
   },
@@ -53,12 +53,12 @@
   },
   "game": {
     "name": "Chained Beasts",
-    "platform": "Steam",
-    "developer": "",
-    "genre": "",
-    "officialUrl": "https://store.steampowered.com/app/3569420/"
+    "platform": "Steam (Windows/macOS)",
+    "developer": "Featherweight Games",
+    "genre": "Gladiator action roguelike",
+    "officialUrl": "https://store.steampowered.com/app/3569420/Chained_Beasts/"
   },
   "seo": {
-    "titleTemplate": "%s | Chained Beasts Guide"
+    "titleTemplate": "%s"
   }
 }

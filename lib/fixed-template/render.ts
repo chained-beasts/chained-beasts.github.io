@@ -106,23 +106,7 @@ function applyEntries(html: string, skin: string, entries: TemplateEntry[]): str
   return html;
 }
 
-function neutralizeDemoCopy(html: string, input: FixedTemplateInput): string {
-  const lead = esc(input.lead || `${input.gameName} guides, walkthroughs, reference information, and quick answers for players.`);
-  let next=html;
-  const replacements:[RegExp,string][]=[
-    [/What Drag(?:&#x27;|')n Wash Is/g,`About ${esc(input.gameName)}`],
-    [/Drag(?:&#x27;|')n Wash is an adult-only dragon wash simulation from Gator Dragon Games\.[\s\S]*?three endings\./g,lead],
-    [/This hub routes you to beginner progress,[\s\S]*?itch\.io\./g,`Use the navigation above to open the guides and reference pages in this site.`],
-    [/Drag(?:&#x27;|')n Wash \(also styled DragN'Wash\)[\s\S]*?open-world exploration\./g,`${esc(input.gameName)} is covered here with player-focused guides and reference information.`],
-    [/Sessions are short by design\.[\s\S]*?Linux\./g,`Use each guide for a focused player task, then follow related pages for deeper coverage.`],
-    [/Ryan, Alexander and Conrad/gi,"Characters and game systems"],
-    [/Three Endings/gi,"Game Guides"],[/3 Routes/gi,"Guide Routes"],[/ENDINGS/g,"GUIDES"],
-    [/Steam \/ itch\.io/gi,"Official platforms"],[/September 10, 2026/gi,"Official release"],[/Gator Dragon Games/gi,"Official developer"],
-  ];
-  for(const [pattern,value] of replacements)next=next.replace(pattern,value);
-  next=next.replaceAll("Drag'n Wash",input.gameName).replaceAll("Drag&#x27;n Wash",esc(input.gameName)).replaceAll("DragN'Wash",input.gameName);
-  return next;
-}
+function neutralizeDemoCopy(html: string, _input: FixedTemplateInput): string { return html; }
 
 function applyCopy(html: string, input: FixedTemplateInput): string {
   let next=neutralizeDemoCopy(html,input);

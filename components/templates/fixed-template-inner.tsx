@@ -5,28 +5,15 @@ import { siteSkin } from "@/config/skin";
 import type { SeoPageDefinition } from "@/config/types";
 import { enabledLegalPages, getRelatedPages, visibleCorePages } from "@/content/registry";
 import { esc, renderFixedDocument } from "@/lib/fixed-template/render";
+import { renderLinks, renderSections } from "./fixed-template-content";
 import { pageSchemas } from "@/lib/schema";
 import { assetPath, routePath } from "@/lib/urls";
 
 function articleInner(page: SeoPageDefinition): string {
-  const sections = page.sections.map((section) => {
-    const paragraphs = [
-      section.intro ? `<p>${esc(section.intro)}</p>` : "",
-      ...(section.paragraphs ?? []).map((paragraph) => `<p>${esc(paragraph)}</p>`),
-    ].join("");
-    const steps = section.steps?.length
-      ? `<ol>${section.steps.map((step) => `<li><b>${esc(step.heading)}</b> ${esc(step.description)}</li>`).join("")}</ol>`
-      : "";
-    return `<section id="${esc(section.id)}"><h2>${esc(section.heading)}</h2>${paragraphs}${steps}</section>`;
-  }).join("");
-  const faq = page.faq?.length
-    ? `<section id="faq"><h2>FAQ</h2>${page.faq.map((item) => `<p><b>${esc(item.question)}</b> ${esc(item.answer)}</p>`).join("")}</section>`
-    : "";
+  const faq = page.faq?.length ? `<section class="cb-faq" id="faq"><h2>Frequently Asked Questions</h2>${page.faq.map(item=>`<details open><summary>${esc(item.question)}</summary><p>${esc(item.answer)}</p></details>`).join("")}</section>` : "";
   const related = getRelatedPages(page);
-  const relatedHtml = related.length
-    ? `<section id="related"><h2>Related</h2><ul>${related.map((item) => `<li><a href="${esc(siteSkin() === "arcade-play" ? assetPath(routePath(item.slug)) : routePath(item.slug))}">${esc(item.navLabel)}</a></li>`).join("")}</ul></section>`
-    : "";
-  return `<p>${esc(page.hero.lead)}</p>${sections}${faq}${relatedHtml}`;
+  const relatedHtml = related.length ? `<section id="related"><h2>Related Chained Beasts guides</h2>${renderLinks(related.map(item => ({slug:item.slug,label:item.navLabel,description:item.description})))}</section>` : "";
+  return `<p class="lead">${esc(page.hero.lead)}</p><p class="cb-status">Last reviewed: ${esc(page.lastReviewed)}</p><div class="cb-content">${renderSections(page.sections)}${faq}${relatedHtml}<section class="cb-external" id="official-sources"><h2>Official source notes</h2><p>Information was checked against the official Chained Beasts Steam store and Featherweight Games announcements on October 20, 2026. Announced future changes are not described as already released.</p><p><a href="https://store.steampowered.com/app/3569420/Chained_Beasts/" rel="noopener noreferrer">Official Steam game</a> · <a href="https://steamcommunity.com/app/3569420" rel="noopener noreferrer">Official developer news</a> · <a href="https://www.featherweightgames.com/press-releases" rel="noopener noreferrer">Developer release news</a></p><p>Independent fan-made guide. Not affiliated with Featherweight Games or Valve.</p></section></div>`;
 }
 
 export function FixedTemplateInner({ page }: { page: SeoPageDefinition }) {
