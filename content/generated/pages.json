@@ -1,1 +1,1110 @@
-[]
+[
+  {
+    "enabled": true,
+    "slug": "patch-notes",
+    "pageType": "updates",
+    "navLabel": "Patch Notes",
+    "title": "Chained Beasts Patch Notes: Latest Hotfix & Roadmap",
+    "description": "Chained Beasts patch notes: see three confirmed October hotfixes, upcoming solo and co-op balance changes, plus November–December plans.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "INDEPENDENT GUIDE · VERIFIED OCTOBER 20, 2026",
+      "heading": "Chained Beasts Patch Notes and Latest Updates",
+      "lead": "The October 19–20 developer news confirms a shipped hotfix for multiplayer achievement credit, offline startup and Twitch polls. A separate difficulty balance patch, November progression work and December Update 1.1 were announced as plans—not as additional released fixes."
+    },
+    "sections": [
+      {
+        "id": "live-fixes",
+        "heading": "Latest Chained Beasts Hotfix: Three Confirmed Fixes",
+        "paragraphs": [
+          "Featherweight Games' launch-week news explicitly calls these changes an already released hotfix. The announcement does not provide a numbered patch version or exact build identifier, so we do not invent one. The three fixes address three different problems rather than a sweeping guarantee that all online and offline faults are solved.",
+          "Certain multiplayer achievements could previously be awarded only to the lobby host. The studio says this issue was fixed. It does not confirm that every missed award will automatically be granted retroactively; affected players should verify their own accounts.",
+          "A launch while offline could become stuck on the opening splash screen. The specific failure has been resolved, according to the developer. Separately, Twitch polls sometimes remained open instead of concluding; that behavior is also listed as fixed.",
+          "The Steam community page can show the announcement under October 19 while the Steam store shows October 20 because of time zones. Those are views of the same news item, not two separate hotfixes."
+        ],
+        "table": {
+          "caption": "Developer-confirmed hotfixes, October 19–20",
+          "columns": [
+            "Issue",
+            "Release status",
+            "Scope of fix"
+          ],
+          "rows": [
+            [
+              "Non-host player missing certain achievements",
+              "SHIPPED",
+              "Host-only award issue fixed; no automatic backfill promised"
+            ],
+            [
+              "Offline launch stuck at the splash screen",
+              "SHIPPED",
+              "Specific offline-startup freeze resolved"
+            ],
+            [
+              "Twitch polls sometimes failed to end",
+              "SHIPPED",
+              "Intermittent failure to close polls fixed"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "next-balance",
+        "heading": "Balance Patch: Announced but Not Confirmed Live",
+        "paragraphs": [
+          "The studio said it expected another update later in launch week to reduce difficulty spikes. Its stated direction was to make single-player slightly easier while making multiplayer slightly harder, except for the final boss. That does not turn these prospective changes into shipped patch notes.",
+          "No official exact damage, health, enemy spawn or reward adjustments were specified in that summary. Guides reporting precise new percentages without a later verifiable build should be treated cautiously.",
+          "Single-player and multiplayer readers need different context: a solo player may plan around personal positioning and recovery decisions, while an online group has to coordinate chains and movement. Neither group should infer that the forthcoming tuning has already affected the currently installed version."
+        ],
+        "table": {
+          "caption": "Confirmed status versus announced intention",
+          "columns": [
+            "Subject",
+            "Developer statement",
+            "Safe interpretation"
+          ],
+          "rows": [
+            [
+              "Solo difficulty",
+              "Make it slightly easier",
+              "PLANNED at the time of the news"
+            ],
+            [
+              "Multiplayer difficulty",
+              "Make it slightly harder",
+              "PLANNED, final boss excepted"
+            ],
+            [
+              "Exact implementation date",
+              "Later in the week",
+              "No release hour verified here"
+            ],
+            [
+              "Specific tuning numbers",
+              "Not supplied",
+              "Do not invent damage or health values"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "slug": "solo-guide",
+            "label": "Solo guide",
+            "description": "Solo strategy and the difference between current and planned balancing"
+          },
+          {
+            "slug": "crossplay",
+            "label": "Co-op support",
+            "description": "Online group modes and platform limitations"
+          }
+        ]
+      },
+      {
+        "id": "roadmap",
+        "heading": "November Meta Progression and December Update 1.1",
+        "paragraphs": [
+          "For November, the developer plans additional content unlocking and build customization through meta progression. It specifically says this should create variety rather than a long-term grind that simply increases permanent player power. The post describes work in progress, not a feature already installed.",
+          "For December, the announced Update 1.1 includes an alternate act set in Rome. The team said details would follow as the release plan narrowed. It did not commit to a precise day, and the October post does not prove the update is live.",
+          "Unlike the already fixed bugs, a roadmap promise can move. Check the most recent official Steam news before telling another player that a feature has arrived."
+        ],
+        "table": {
+          "caption": "Roadmap as described October 19–20",
+          "columns": [
+            "Target",
+            "Plan",
+            "Current evidence"
+          ],
+          "rows": [
+            [
+              "Later that week",
+              "Solo and multiplayer balance changes",
+              "Announced, not confirmed shipped"
+            ],
+            [
+              "November",
+              "Meta progression and content unlocks",
+              "Announced plan"
+            ],
+            [
+              "December",
+              "Update 1.1 and alternate Rome act",
+              "Announced plan, date unspecified"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "timeline",
+        "heading": "Chained Beasts Update Timeline",
+        "paragraphs": [
+          "October 15, 2026: the game formally released on Steam. Its developer outlined full-release content, including solo and online crossplay, nine battles across three acts ahead of the final encounter, ten difficulties and more than 70 afflictions.",
+          "October 19–20, 2026: the next major communication documented launch feedback, three shipped fixes and forthcoming balancing and content plans. These two dates are not different game versions merely because they fall on separate storefront and community calendar displays.",
+          "This fan guide is reviewed as of October 20. Its review date is not an automated claim that every subsequent patch has been incorporated."
+        ],
+        "links": [
+          {
+            "slug": "beginner-guide",
+            "label": "Beginner guide",
+            "description": "Adjust the first-run plan to the released game"
+          },
+          {
+            "slug": "solo-guide",
+            "label": "Solo balance context",
+            "description": "Interpret the planned difficulty reduction safely"
+          }
+        ]
+      },
+      {
+        "id": "checking",
+        "heading": "How to Check for a Newer Chained Beasts Patch",
+        "paragraphs": [
+          "Visit the official Chained Beasts Steam game page, open Update History or community News, and compare the issue description to the most recent developer announcement. Check whether it describes a release that has shipped or a roadmap item still in development.",
+          "On your own device, make sure the game client has installed available updates before testing an issue again. If a problem persists, record your platform, approximate build date, whether you were offline or online and the behavior you can reproduce. These general troubleshooting notes are not a game-specific debug command."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What did the latest Chained Beasts hotfix fix?",
+        "answer": "Certain host-only multiplayer achievement awards, an offline splash-screen startup stall and Twitch polls that sometimes would not end."
+      },
+      {
+        "question": "Is the October solo balance patch out?",
+        "answer": "The October 19–20 announcement calls it an upcoming patch. A later release note is needed to confirm shipment."
+      },
+      {
+        "question": "Will players receive previously missed multiplayer achievements?",
+        "answer": "The developer confirms a fix for certain achievement credit failures but does not state that missed achievements are awarded retroactively."
+      },
+      {
+        "question": "Is Chained Beasts Update 1.1 live?",
+        "answer": "Update 1.1 is described in the cited news as a planned December release, not an already shipped feature."
+      }
+    ],
+    "relatedSlugs": [
+      "solo-guide",
+      "crossplay",
+      "beginner-guide"
+    ],
+    "lastReviewed": "2026-10-20"
+  },
+  {
+    "enabled": true,
+    "slug": "beginner-guide",
+    "pageType": "guide",
+    "navLabel": "Beginner Guide",
+    "title": "Chained Beasts Beginner Guide: First Run & Combat Tips",
+    "description": "Start Chained Beasts with first-run tips for chain positioning, weapons, arena hazards, healing choices, and solo versus co-op practice.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "INDEPENDENT GUIDE · VERIFIED OCTOBER 20, 2026",
+      "heading": "Chained Beasts Beginner Guide: Your First Arena Run",
+      "lead": "Start by reading the current tutorial prompts, checking how your chain can move and keeping a fallback after throwing a weapon. Between fights, read the recovery trade-off before taking a heal. These are practical exercises based on developer-confirmed mechanics, not claims of a personally tested walkthrough."
+    },
+    "sections": [
+      {
+        "id": "before",
+        "heading": "Before Your First Run: Mode, Controls and Practice Goal",
+        "paragraphs": [
+          "Chained Beasts officially released on October 15, 2026. It supports one to four players, with solo, online cooperative and local co-op options. The launch version added content beyond the earlier demo, so do not blindly follow a pre-release key map or assume every earlier video shows the latest combat behavior.",
+          "Steam says controllers are recommended, while same-screen cooperative play requires at least one gamepad on the Steam editions. For all platforms, use the inputs shown in the current game tutorial rather than relying on unverified keyboard or controller bindings from someone else's recording.",
+          "Before your first fight, set one modest goal: keep room around pillars, avoid being stranded without a usable weapon or understand a recovery choice. Trying to learn every affliction and every arena trick in one round makes it difficult to identify what helped.",
+          "Solo and co-op are not interchangeable practices. A group must coordinate chain direction with other humans; a solo player should first learn the attachment behavior actually shown by the current game."
+        ],
+        "subsections": [
+          {
+            "heading": "Solo preparation",
+            "paragraphs": [
+              "Read the current game's solo controls and identify a safe space after each attack. Do not copy a group maneuver that requires another human player."
+            ],
+            "bullets": [
+              "Choose one observable movement goal",
+              "Plan a second weapon or route",
+              "Record what blocked your escape"
+            ]
+          },
+          {
+            "heading": "Co-op preparation",
+            "paragraphs": [
+              "Agree on a direction callout and regroup instruction before starting. These are optional teamwork habits, not official in-game commands."
+            ],
+            "bullets": [
+              "Say who calls retreats",
+              "Watch the path around pillars",
+              "Know which teammate can still move"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chain",
+        "heading": "Your First Fight: Use the Chain Without Losing Position",
+        "paragraphs": [
+          "The developer says coordinated chains can trip foes and can also tangle around pillars when teammates do not cooperate. The first practical exercise is to look at the line between players, identify which objects might obstruct it and decide where everyone will move before charging.",
+          "Choose a controlled engagement instead of treating every enemy as a reason to sprint. If the chain has already wrapped around cover, another aggressive move may make the group's position worse. Stop, communicate and test a more open approach.",
+          "The game's official description confirms throwable weapons and warns players to have another available. Before throwing, look for a usable replacement or a safer environmental option. This is a readiness decision, not a claim that any particular weapon always respawns.",
+          "Avoid copying unverified damage and stun tables. The current official store listing supports the broad use of weapons, traps and chains, not every detailed formula claimed by third-party tips."
+        ],
+        "steps": [
+          {
+            "heading": "Scan",
+            "description": "Identify pillars, spikes, pits, opponents and a reachable safe route before committing."
+          },
+          {
+            "heading": "Coordinate",
+            "description": "In co-op, agree on direction. In solo, use your own current-mode control prompts."
+          },
+          {
+            "heading": "Attack deliberately",
+            "description": "Use tutorial-confirmed attacks or an environmental opportunity while protecting a fallback."
+          },
+          {
+            "heading": "Review",
+            "description": "Note one positioning error, weapon loss or successful escape to test next round."
+          }
+        ]
+      },
+      {
+        "id": "arena",
+        "heading": "Arena Hazards, Tricks and Crowd Favor",
+        "paragraphs": [
+          "The Steam description mentions spikes, snakes, thrown weapons and creatively using the environment to impress the bloodthirsty crowd. These ideas make terrain part of combat rather than scenery only.",
+          "Not every available trick is safe in every encounter. If a hazardous object is positioned beyond several enemies or across the chain's movement path, assess the risk of approaching it before attempting a flashy knockback.",
+          "The sources used here do not document a guaranteed crowd-favor score for each action, fixed damage numbers for spikes or a universal best opening attack. Observe the current game feedback rather than building a run around those imaginary values."
+        ]
+      },
+      {
+        "id": "recovery",
+        "heading": "Between Battles: Skills, Healing and Afflictions",
+        "paragraphs": [
+          "The launch announcement lists more than 70 skills, more than 70 afflictions and 40-plus items. Those are developer totals, not a full set of mechanics individually recorded here. An early lesson is to read each offer in the current game instead of treating a guide's old item name as universally current.",
+          "Some recovery choices bring drawbacks. Before choosing, ask which problem the benefit solves, what visible penalty comes with it and whether the next arena makes the trade dangerous.",
+          "Likewise, consider whether a newly offered skill helps your current run. Choosing something solely because an unrelated guide ranks it highly can be less useful than solving your actual lack of movement, defense or equipment."
+        ],
+        "table": {
+          "caption": "First-run decision worksheet",
+          "columns": [
+            "Symptom",
+            "Question to ask",
+            "Practice on the next attempt"
+          ],
+          "rows": [
+            [
+              "Chain tangles",
+              "Which object divided our movement?",
+              "Call a shared direction before closing in"
+            ],
+            [
+              "Thrown weapon missing",
+              "Was another usable object nearby?",
+              "Identify fallback first"
+            ],
+            [
+              "Unexpected injury burden",
+              "What did the recovery screen say?",
+              "Compare cost and relief"
+            ],
+            [
+              "Hazard approach failed",
+              "Was the retreat path blocked?",
+              "Use a safer angle or delay the trick"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "slug": "afflictions",
+            "label": "Afflictions and healing",
+            "description": "Understand trade-offs before committing"
+          },
+          {
+            "slug": "solo-guide",
+            "label": "Solo guide",
+            "description": "A separate practice plan for one player"
+          }
+        ]
+      },
+      {
+        "id": "mistakes",
+        "heading": "Five Common First-Run Habits to Review",
+        "paragraphs": [
+          "Watch for five avoidable habits: ignoring the chain route, rushing around pillars, throwing the last easy weapon, accepting recovery without reading its drawbacks and changing too many tactics at once.",
+          "These are editorial observations to watch for, not guaranteed events or game achievements. If one occurs, write down the relevant moment and plan a single change next time. This is more informative than pretending every player makes the same errors.",
+          "With friends, review communication and shared movement. Alone, focus on your own escape route and between-battle decisions. Check the latest patch notes before assuming a future solo balance change is already affecting the encounter.",
+          "A useful closing checklist is: update the game, read current controls, choose solo or co-op, identify hazards, plan your weapon fallback, inspect injuries and review one thing that went wrong or right."
+        ],
+        "links": [
+          {
+            "slug": "crossplay",
+            "label": "Play with friends",
+            "description": "Confirmed cross-platform features and limits"
+          },
+          {
+            "slug": "patch-notes",
+            "label": "Latest changes",
+            "description": "Actual fixes versus future plans"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What should I do first in Chained Beasts?",
+        "answer": "Follow the current tutorial, identify an escape route and learn chain movement before attempting elaborate attacks."
+      },
+      {
+        "question": "Can I use beginner tips solo?",
+        "answer": "Yes, but do not assume a maneuver requiring other human players works the same way alone."
+      },
+      {
+        "question": "How do I use chains in combat?",
+        "answer": "The developer confirms coordinated chains can trip enemies; use current tutorial prompts for exact inputs."
+      },
+      {
+        "question": "Should I heal after every battle?",
+        "answer": "No universal rule is confirmed; read the present benefit, drawback and situation."
+      },
+      {
+        "question": "Can I follow old demo controls?",
+        "answer": "Only after checking your current game because the full release has changed content and may differ by input device."
+      }
+    ],
+    "relatedSlugs": [
+      "afflictions",
+      "solo-guide",
+      "crossplay",
+      "patch-notes"
+    ],
+    "lastReviewed": "2026-10-20"
+  },
+  {
+    "enabled": true,
+    "slug": "crossplay",
+    "pageType": "guide",
+    "navLabel": "Crossplay",
+    "title": "Chained Beasts Crossplay: Platforms & Co-op Guide",
+    "description": "Does Chained Beasts support crossplay? Check confirmed online co-op, local modes, 1–4 players, platform announcements and invite uncertainties.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "INDEPENDENT GUIDE · VERIFIED OCTOBER 20, 2026",
+      "heading": "Chained Beasts Crossplay and Multiplayer Explained",
+      "lead": "Yes. Chained Beasts officially advertises online crossplay and supports one to four players. Local couch co-op is a separate option. The cited developer notices do not prove every platform pairing, the exact invite-code menu location or cross-save support."
+    },
+    "sections": [
+      {
+        "id": "answer",
+        "heading": "Does Chained Beasts Have Crossplay?",
+        "paragraphs": [
+          "The Steam store explicitly lists Cross-Platform Multiplayer, and the developer's October 15 release news mentions online crossplay. That confirms cross-platform play as a feature. It is not equivalent to a chart guaranteeing that every edition can connect directly to every other edition.",
+          "Crossplay is the ability to play online with people using supported different platforms. Cross-progression, by contrast, would mean carrying saves and unlocks between systems. One feature does not establish the other.",
+          "Do not mistake 'not verified' for 'not supported.' The responsible answer about a specific platform pair is to check the latest support information for both editions rather than invent a compatibility promise."
+        ],
+        "table": {
+          "caption": "Quick answer: evidence from official sources",
+          "columns": [
+            "Question",
+            "Status",
+            "What it establishes"
+          ],
+          "rows": [
+            [
+              "Online crossplay",
+              "CONFIRMED",
+              "Developer launch news and Steam feature tag"
+            ],
+            [
+              "Player count",
+              "CONFIRMED: 1–4",
+              "Maximum total players, not four friends plus host"
+            ],
+            [
+              "Couch co-op",
+              "CONFIRMED",
+              "Local/shared-screen play is distinct"
+            ],
+            [
+              "Every platform-to-platform pair",
+              "NOT ENUMERATED",
+              "Verify the exact editions"
+            ],
+            [
+              "Cross-save support",
+              "NOT ESTABLISHED",
+              "No claim should be inferred"
+            ],
+            [
+              "Exact invite-code menu",
+              "NOT ESTABLISHED",
+              "No verified universal click path in cited news"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "modes",
+        "heading": "Online Co-op, Local Co-op and Player Limits",
+        "paragraphs": [
+          "Steam lists single-player, online co-op, shared-screen play, Remote Play Together and cross-platform multiplayer. These labels describe separate ways to play; one mode's requirements do not automatically carry over to another.",
+          "The Steam system requirements state that at least one gamepad is necessary for same-screen co-op. That is a local setup note for Steam editions and does not prove the equivalent controller requirements on every console.",
+          "The public announcement does not definitively explain mixed local-and-online parties on each release. Players who require that arrangement should seek a current platform-specific statement rather than assuming a universal party configuration."
+        ],
+        "table": {
+          "caption": "Modes you can distinguish before forming a party",
+          "columns": [
+            "Mode",
+            "Known support",
+            "Important detail"
+          ],
+          "rows": [
+            [
+              "Single-player",
+              "Officially supported",
+              "No human teammate required"
+            ],
+            [
+              "Online co-op",
+              "Officially supported",
+              "Up to four players total"
+            ],
+            [
+              "Cross-platform online co-op",
+              "Officially supported feature",
+              "Pair-by-pair scope not documented here"
+            ],
+            [
+              "Couch co-op",
+              "Officially supported",
+              "Steam same-screen note requires a gamepad"
+            ],
+            [
+              "Remote Play Together",
+              "Steam feature listed",
+              "Check host and guest setup separately"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "platforms",
+        "heading": "Which Platforms Has Featherweight Announced?",
+        "paragraphs": [
+          "The studio's September 2026 press release named Steam, Xbox/Game Pass for Xbox and Windows PC, PlayStation 5 and Nintendo Switch for its October 15 launch. The Steam store identifies Windows and macOS versions directly.",
+          "An announced platform launch does not independently confirm regional availability in every digital store or every pair's online compatibility. Avoid presenting a platform list as if it were a documented full-mesh crossplay chart.",
+          "Online access, friends lists and subscription rules can vary by platform. This guide does not invent one universal account-linking process or purchasing condition."
+        ],
+        "table": {
+          "caption": "Release announcements versus pairing evidence",
+          "columns": [
+            "Edition",
+            "Source",
+            "Specific pair compatibility"
+          ],
+          "rows": [
+            [
+              "Steam Windows/macOS",
+              "Official Steam page",
+              "Not individually enumerated"
+            ],
+            [
+              "PlayStation 5",
+              "September developer press release",
+              "Not individually enumerated"
+            ],
+            [
+              "Xbox / Game Pass",
+              "September developer press release",
+              "Not individually enumerated"
+            ],
+            [
+              "Nintendo Switch",
+              "September developer press release",
+              "Not individually enumerated"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "friends",
+        "heading": "Before You Invite Friends: A Practical Checklist",
+        "paragraphs": [
+          "Ask everyone to confirm the edition they own and install the current available update. Agree whether you intend to play online or on the same screen, then check that the total group is no larger than four.",
+          "Check each platform's online account or service requirements using that platform's own documentation. If the game displays a lobby problem, record the exact wording and affected editions before trying an unverified workaround.",
+          "The steps below are general preparation guidance, not a fabricated screenshot-by-screenshot tour through Chained Beasts' invitation menus."
+        ],
+        "steps": [
+          {
+            "heading": "Confirm the platform pair",
+            "description": "Write down all platform editions and find current official support for that exact combination."
+          },
+          {
+            "heading": "Confirm versions",
+            "description": "Install the latest available game updates before testing online compatibility."
+          },
+          {
+            "heading": "Choose a mode",
+            "description": "Distinguish remote online co-op from same-screen play and Steam's gamepad requirement."
+          },
+          {
+            "heading": "Troubleshoot clearly",
+            "description": "Document the actual error or behavior instead of guessing at an invite-code location."
+          }
+        ]
+      },
+      {
+        "id": "multiplayer-patches",
+        "heading": "Multiplayer Update Notes and Related Guides",
+        "paragraphs": [
+          "The October developer hotfix addressed certain achievements being granted only to the multiplayer host. It does not state that every multiplayer connection failure was fixed or that past achievements will be reissued automatically.",
+          "For successful group play, the beginner guide offers movement and chain communication exercises. If you decide to play alone instead, the solo guide explains why its planning questions differ.",
+          "Always compare newer patch announcements with this October 20 evidence check; an official later update may provide invitation or platform details that were not specified here."
+        ],
+        "links": [
+          {
+            "slug": "patch-notes",
+            "label": "Multiplayer hotfix",
+            "description": "Separate the shipped achievement fix from future balance plans"
+          },
+          {
+            "slug": "beginner-guide",
+            "label": "First group run",
+            "description": "Chain positioning and early fights"
+          },
+          {
+            "slug": "solo-guide",
+            "label": "Solo guide",
+            "description": "What changes when there are no human partners"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does Chained Beasts support crossplay?",
+        "answer": "Yes. Online crossplay is developer-confirmed."
+      },
+      {
+        "question": "Can Steam players play with console friends?",
+        "answer": "Online crossplay is advertised, but the cited announcement does not list every exact pairing; verify the two releases."
+      },
+      {
+        "question": "How many people can play?",
+        "answer": "The developer states one to four players total."
+      },
+      {
+        "question": "Is couch co-op crossplay?",
+        "answer": "No. Couch co-op means players share a local screen; crossplay concerns supported different platforms online."
+      },
+      {
+        "question": "Does crossplay include saved progress?",
+        "answer": "Cross-save support is not confirmed by the cited material."
+      },
+      {
+        "question": "Where is the invite code?",
+        "answer": "The cited official sources do not specify a universal current menu path."
+      }
+    ],
+    "relatedSlugs": [
+      "patch-notes",
+      "beginner-guide",
+      "solo-guide"
+    ],
+    "lastReviewed": "2026-10-20"
+  },
+  {
+    "enabled": true,
+    "slug": "solo-guide",
+    "pageType": "guide",
+    "navLabel": "Solo Guide",
+    "title": "Chained Beasts Solo Guide: Tips & Difficulty Update",
+    "description": "Play Chained Beasts solo with confirmed support, positioning and healing decisions, plus the latest planned solo difficulty balance status.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "INDEPENDENT GUIDE · VERIFIED OCTOBER 20, 2026",
+      "heading": "Chained Beasts Solo Guide: Playing Alone",
+      "lead": "Yes—Chained Beasts supports single-player. The developer's October 19–20 news says solo is intended to become slightly easier in a later balance patch. The announcement does not prove that the future change is already installed or publish exact tuning numbers."
+    },
+    "sections": [
+      {
+        "id": "solo-support",
+        "heading": "Can You Play Chained Beasts Solo?",
+        "paragraphs": [
+          "The Steam store lists single-player, and the October 15 launch post expressly states that players may fight alone. Solo is part of the official released game, not a fan-made modification or temporary demo-only function.",
+          "Chained Beasts is also marketed around friends physically chained together, but that cooperative concept does not cancel its solo support. Players should read the current in-game solo instructions instead of copying a video that assumes two human players are attached.",
+          "Some third-party solo pages describe specific ball or anchor behavior. Without a direct verified current build recording, this guide does not present those mechanics as developer-confirmed facts.",
+          "An important contrast is the human planning role. In co-op you coordinate a route with other players; solo requires you to choose your own equipment, movement and recovery strategy without expecting another person to call a retreat."
+        ],
+        "table": {
+          "caption": "Supported modes and editorial planning differences",
+          "columns": [
+            "Question",
+            "Solo",
+            "Co-op"
+          ],
+          "rows": [
+            [
+              "Mode supported?",
+              "Yes, official",
+              "Yes, official"
+            ],
+            [
+              "Human teammates required?",
+              "No",
+              "Group coordination useful"
+            ],
+            [
+              "Early movement focus",
+              "A safe individual route",
+              "Shared chain direction"
+            ],
+            [
+              "Between-fight decisions",
+              "Read your own penalties",
+              "Discuss group constraints"
+            ],
+            [
+              "Next balance direction",
+              "Planned slightly easier",
+              "Planned slightly harder except final boss"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "position",
+        "heading": "Solo Combat: Protect Your Escape Route",
+        "paragraphs": [
+          "Official game material emphasizes weapons, chain physics and environmental hazards. An actionable solo habit is to identify a retreat lane before an attack. This is a planning rule, not an assertion that enemies follow a particular unpublished movement algorithm.",
+          "If a large arena obstacle sits behind you, consider repositioning before committing. Throwing a weapon is an official feature, but the developer warns that players should have another available. Without backup equipment, a risky throw may remove an important option for the next exchange.",
+          "Observe the situation after each fight: were you trapped by scenery, short of a weapon or carrying an injury that disrupted movement? Writing one specific cause helps more than a generalized 'just dodge more' tip.",
+          "The source materials do not establish a universal best weapon, exact boss health, guaranteed drop order or numerical solo damage modifier. Leave those claims for real current-build tests."
+        ],
+        "subsections": [
+          {
+            "heading": "Before the next enemy",
+            "paragraphs": [
+              "Look for a safe lane, usable weapon and a hazard you can avoid. Choose one clear decision to make before any commitment."
+            ],
+            "bullets": [
+              "Identify a safe retreat path",
+              "Note reachable replacement equipment",
+              "Check the current tutorial instructions"
+            ]
+          },
+          {
+            "heading": "After a difficult fight",
+            "paragraphs": [
+              "Review the cause of danger and change only one relevant habit in the next practice attempt."
+            ],
+            "bullets": [
+              "Record what blocked movement",
+              "Read any new affliction",
+              "Avoid attributing everything to an unreleased patch"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "injuries",
+        "heading": "Managing Injuries and Healing Alone",
+        "paragraphs": [
+          "Featherweight describes physical and mental injuries and more than 70 afflictions at launch. Its earlier official update also introduced the Surgeon as a between-acts option for managing afflictions or obtaining skill-granting augmentations at a cost.",
+          "The exact result of a treatment should come from the current in-game text. The cited sources do not demonstrate that a named ailment is cured with a fixed success rate or fixed price. A solo player can nevertheless make a useful decision by comparing a displayed immediate benefit to a potentially more disruptive drawback.",
+          "Use the recovery worksheet to make your own observations, then revise your plan based on what actually happened. This separates personal experience from an unsupported 'best healing' tier list."
+        ],
+        "table": {
+          "caption": "Solo recovery journal, not fabricated treatment data",
+          "columns": [
+            "Field",
+            "What to observe",
+            "Decision purpose"
+          ],
+          "rows": [
+            [
+              "Current condition",
+              "Exact name and in-game description",
+              "Identify the real constraint"
+            ],
+            [
+              "Recovery offered",
+              "Visible benefit and any displayed cost",
+              "Compare alternatives"
+            ],
+            [
+              "Post-choice effect",
+              "Observed next-fight movement or survival",
+              "Assess the actual trade-off"
+            ],
+            [
+              "Date and edition",
+              "Platform and available build note",
+              "Avoid mixing different balance versions"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "slug": "afflictions",
+            "label": "Afflictions and Surgeon",
+            "description": "Known mechanics and a treatment decision framework"
+          }
+        ]
+      },
+      {
+        "id": "balance",
+        "heading": "Solo Difficulty: Current Support vs Planned Rebalance",
+        "paragraphs": [
+          "The October news announced solo tuning that would make the mode slightly easier and multiplayer tuning that would make groups slightly harder, excluding the final boss. The changes were described as coming later that week; the post itself is not a release notice for them.",
+          "An exact launch date, build number, damage multiplier or revised enemy roster was not supplied. Do not tell players the solo adjustment is already active unless a newer official release record confirms it.",
+          "Check the latest Steam community announcements before using any claimed new solo meta. A practical positioning and recovery plan stays helpful regardless of whether a future balance tweak has shipped."
+        ],
+        "table": {
+          "caption": "Evidence status checked October 20",
+          "columns": [
+            "Feature",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Official solo game mode",
+              "CONFIRMED LIVE"
+            ],
+            [
+              "Easier single-player balance",
+              "PLANNED in October announcement"
+            ],
+            [
+              "Specific damage and health figures",
+              "NOT PUBLISHED in cited summary"
+            ],
+            [
+              "Balance release version",
+              "NOT CONFIRMED from that announcement"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "slug": "patch-notes",
+            "label": "Latest patch notes",
+            "description": "Shipped hotfix versus proposed solo balancing"
+          }
+        ]
+      },
+      {
+        "id": "practice",
+        "heading": "A Three-Run Solo Learning Plan",
+        "paragraphs": [
+          "Practice run one: watch your movement and identify one arena object that blocked a safe retreat. Do not invent a specific enemy or battle order; use whichever encounter appears in your current game.",
+          "Practice run two: focus on the weapon you carry, when you throw it and whether there is a backup. A deliberate throw that leaves no plan afterward may be a worse trade than a shorter-range action.",
+          "Practice run three: read all recovery choices and write down the actual condition and consequence. Compare the following fight rather than assuming every improvement is caused by upcoming balancing.",
+          "This is an original observation worksheet, not an official quest and not a claim that its writer personally completed the three runs. You can adapt it when moving from solo to co-op, but chain communication then becomes a shared responsibility."
+        ],
+        "steps": [
+          {
+            "heading": "Run 1: movement",
+            "description": "Record one problem with hazards, positioning or retreat."
+          },
+          {
+            "heading": "Run 2: equipment",
+            "description": "Plan a backup before a weapon throw."
+          },
+          {
+            "heading": "Run 3: recovery",
+            "description": "Capture a real healing trade-off and observe the next battle."
+          }
+        ],
+        "links": [
+          {
+            "slug": "beginner-guide",
+            "label": "First-run basics",
+            "description": "Core weapon, chain and hazard concepts"
+          },
+          {
+            "slug": "crossplay",
+            "label": "Co-op comparison",
+            "description": "Official support and limits for playing with friends"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I play Chained Beasts alone?",
+        "answer": "Yes. Single-player is an official launch feature."
+      },
+      {
+        "question": "Did the October hotfix make solo easier?",
+        "answer": "The hotfix fixed three different bugs. A slightly easier solo mode was separately announced as a future balance plan."
+      },
+      {
+        "question": "Do I need three friends?",
+        "answer": "No. The game supports solo play."
+      },
+      {
+        "question": "Does solo include an AI teammate?",
+        "answer": "The cited developer and store descriptions do not resolve that specific gameplay detail."
+      },
+      {
+        "question": "Is solo always harder?",
+        "answer": "A universal comparison is not supported by the cited materials; the studio planned mode-specific balancing."
+      }
+    ],
+    "relatedSlugs": [
+      "patch-notes",
+      "afflictions",
+      "beginner-guide",
+      "crossplay"
+    ],
+    "lastReviewed": "2026-10-20"
+  },
+  {
+    "enabled": true,
+    "slug": "afflictions",
+    "pageType": "guide",
+    "navLabel": "Afflictions",
+    "title": "Chained Beasts Afflictions: Healing & Surgeon Guide",
+    "description": "Chained Beasts afflictions guide: confirmed healing and Surgeon mechanics, official examples, treatment trade-offs and an honest evidence-based checklist.",
+    "navVisible": true,
+    "hero": {
+      "eyebrow": "INDEPENDENT GUIDE · VERIFIED OCTOBER 20, 2026",
+      "heading": "Chained Beasts Afflictions and Healing Guide",
+      "lead": "Featherweight Games reports over 70 afflictions in Chained Beasts at launch. Injuries and recovery choices can affect a run; the developer says its Surgeon can help manage afflictions or offer skill-granting augmentations at a cost. Specific cure chances and every individual effect are not published in the cited materials."
+    },
+    "sections": [
+      {
+        "id": "afflictions-explained",
+        "heading": "What Are Chained Beasts Afflictions?",
+        "paragraphs": [
+          "The official game description emphasizes that gladiators endure physical and mental injuries while surviving consecutive fights. The October 15 launch post confirms more than 70 afflictions, but that quantity is not a licensed list of every name, trigger or cure.",
+          "Pre-launch official news provides examples of the variety involved. The developer described impaired vision and missing toes as possible affliction-like inconveniences, and a July beta announcement named Psychosis as a condition that made imaginary weapons appear in the arena.",
+          "Those examples are grounded in developer statements but were published before full launch. It would be inaccurate to assign them a definitive launch-version percentage, duration or cure without checking the currently released game.",
+          "Read the effect shown by your own game as the source of truth for a particular choice. This site explains the framework and distinguishes verified descriptions from the details it has not directly tested."
+        ],
+        "table": {
+          "caption": "Developer-described affliction examples",
+          "columns": [
+            "Example",
+            "Published description",
+            "Verification boundary"
+          ],
+          "rows": [
+            [
+              "Psychosis",
+              "Hallucinated weapons appearing in the arena",
+              "Described in July beta; verify current launch effect"
+            ],
+            [
+              "Impaired vision",
+              "Example of a debilitating injury",
+              "Developer pre-release description"
+            ],
+            [
+              "Missing toes",
+              "Example of physical injury drawbacks",
+              "Developer pre-release description"
+            ],
+            [
+              "70+ afflictions",
+              "Official full-release feature count",
+              "Not a verified exhaustive list on this site"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "damage-and-tradeoffs",
+        "heading": "How Injuries Affect Your Next Fight",
+        "paragraphs": [
+          "A visible injury matters because it may alter what movement, weapons or decisions are practical in the next battle. Not every affliction is necessarily acquired from the same source or removed by the same type of treatment.",
+          "The developer has emphasized recovery systems with serious trade-offs. In real play, compare the condition you have with the benefit and drawback shown for the available option instead of selecting the one whose name sounds safest.",
+          "Some difficulties are more important for solo than for a communicating group, and vice versa. That is a tactical judgment, not evidence of a different hidden solo affliction table.",
+          "Do not assume a single community screenshot documents the complete system; effects may have changed since the demo or beta."
+        ]
+      },
+      {
+        "id": "healing-decisions",
+        "heading": "Healing and Afflictions: A Decision Worksheet",
+        "paragraphs": [
+          "Before accepting a remedy, identify the exact condition, read the description of the proposed benefit and note any displayed penalty. Ask whether the next fight will be made safer overall, not merely whether your health rises right away.",
+          "A remedy may be helpful without being universally optimal. If the offered trade has a cost, compare it to the danger of remaining injured. The official materials used here do not provide a fixed coin cost, success chance or exhaustive answer for every condition.",
+          "Where a player-made effect table relies on a single attempt, it should be labeled as a single observation rather than a guaranteed mechanic. Without an original captured run, this page does not invent names or numbers to complete an artificial tier list."
+        ],
+        "table": {
+          "caption": "Healing choices — useful questions, not invented odds",
+          "columns": [
+            "On-screen situation",
+            "Decision question",
+            "Unsupported assumption to avoid"
+          ],
+          "rows": [
+            [
+              "Injury feels manageable",
+              "Is the next fight still safe?",
+              "Every heal is mandatory"
+            ],
+            [
+              "Remedy has a downside",
+              "Could the new penalty hurt more?",
+              "Every heal is a clean reset"
+            ],
+            [
+              "Procedure offers a skill",
+              "What is its real cost?",
+              "All augmentations have a fixed price"
+            ],
+            [
+              "Effect text is unfamiliar",
+              "Can I inspect the current game description?",
+              "A wiki guess proves the effect"
+            ]
+          ]
+        },
+        "steps": [
+          {
+            "heading": "Read the condition",
+            "description": "Record the exact on-screen description, not a remembered nickname."
+          },
+          {
+            "heading": "Compare treatments",
+            "description": "Read the benefit, cost and potential new penalty."
+          },
+          {
+            "heading": "Decide for the next fight",
+            "description": "Prioritize the option that preserves workable movement and equipment."
+          },
+          {
+            "heading": "Log the outcome",
+            "description": "Observe the following encounter before making general rules."
+          }
+        ]
+      },
+      {
+        "id": "surgeon",
+        "heading": "Chained Beasts Surgeon: What Is Officially Confirmed?",
+        "paragraphs": [
+          "In the July 2026 official 'Head North to Germania' beta news, Featherweight said the Surgeon could be visited between acts. It described two purposes: help manage accumulated afflictions and offer body augmentations that grant skills.",
+          "The same post warns that every procedure has a cost. It does not establish that all 70-plus conditions can be removed by this character or that an augmentation is identical to a cure.",
+          "Players should inspect the version they are actually playing. A beta description alone cannot support claims about exact release-build prices, menu timing or the results of treating a particular named affliction.",
+          "To go deeper than another general guide, use a traceable before-and-after record: capture your affliction screen, the procedure option and the visible result. Only then can a guide responsibly report a specific tested choice."
+        ],
+        "table": {
+          "caption": "Surgeon facts versus unsupported claims",
+          "columns": [
+            "Claim",
+            "Evidence"
+          ],
+          "rows": [
+            [
+              "Can help manage afflictions",
+              "Official developer beta update"
+            ],
+            [
+              "May grant skills through body augmentation",
+              "Official developer beta update"
+            ],
+            [
+              "Procedures involve a cost",
+              "Official developer beta update"
+            ],
+            [
+              "Every ailment has a guaranteed cure",
+              "Not established"
+            ],
+            [
+              "A fixed success percentage for each surgery",
+              "Not established"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "effect-records",
+        "heading": "How to Record Real Affliction Effects",
+        "paragraphs": [
+          "A useful observation entry contains the condition name and complete on-screen wording, mode, game build if visible, offered treatment, displayed trade-off and result in the next fight. One run documents an event but not its probability.",
+          "If you plan to compare two remedies, note whether the conditions before treatment were actually comparable. Winning the next fight does not by itself prove a surgeon option raised a hidden stat.",
+          "This page deliberately avoids claiming a 70-item complete affliction encyclopedia without direct source evidence. That restraint is important because other sites may present memorable examples, but a copied list cannot validate itself.",
+          "For first-time players, the beginner guide helps frame injury choices during early battles. Solo players can use the dedicated solo log. Check official news for updates before relying on mechanics from earlier beta versions."
+        ],
+        "table": {
+          "caption": "Reproducible effect entry fields",
+          "columns": [
+            "Field",
+            "Record from your own game"
+          ],
+          "rows": [
+            [
+              "Affliction name",
+              "Exact in-game wording"
+            ],
+            [
+              "Build/date/mode",
+              "Context of this observation"
+            ],
+            [
+              "Before treatment",
+              "Visible injury and penalties"
+            ],
+            [
+              "Treatment",
+              "Cost, choices, new conditions shown"
+            ],
+            [
+              "After treatment",
+              "Immediate and next-fight behavior"
+            ],
+            [
+              "Evidence quality",
+              "Single observation or repeated tests"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "slug": "beginner-guide",
+            "label": "Beginner recovery",
+            "description": "Apply injury decisions during the first run"
+          },
+          {
+            "slug": "solo-guide",
+            "label": "Solo injuries",
+            "description": "Practice recovery without a human team"
+          },
+          {
+            "slug": "patch-notes",
+            "label": "Patch status",
+            "description": "Watch for newer changes to recovery systems"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How many afflictions does Chained Beasts have?",
+        "answer": "The developer reports more than 70 in the full release."
+      },
+      {
+        "question": "Can the Surgeon cure every affliction?",
+        "answer": "The developer says the Surgeon helps manage afflictions, not that all conditions have a guaranteed cure."
+      },
+      {
+        "question": "Are treatment odds published?",
+        "answer": "Specific universal success rates and costs are not established by the cited official information."
+      },
+      {
+        "question": "What is Psychosis?",
+        "answer": "Official July beta news described hallucinated weapons; verify its current effect in the released version."
+      },
+      {
+        "question": "Are augmentations the same as healing?",
+        "answer": "The developer describes augmentations as skill-granting procedures, not simply clean removal of every injury."
+      }
+    ],
+    "relatedSlugs": [
+      "beginner-guide",
+      "solo-guide",
+      "patch-notes"
+    ],
+    "lastReviewed": "2026-10-20"
+  }
+]

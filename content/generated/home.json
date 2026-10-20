@@ -2,29 +2,197 @@
   "enabled": true,
   "slug": "",
   "pageType": "home",
-  "title": "Chained Beasts Guide",
-  "description": "Guides, walkthroughs, tips, updates, and reference information for Chained Beasts.",
   "navVisible": true,
+  "title": "Chained Beasts Wiki: Guides, Co-op & Latest Updates",
+  "description": "Chained Beasts wiki with verified hotfix notes, beginner tips, crossplay, solo guides, afflictions and official developer news.",
   "hero": {
-    "eyebrow": "Game guide",
-    "heading": "Chained Beasts",
-    "lead": "Guides, walkthroughs, tips, updates, and reference information for Chained Beasts.",
-    "supportingText": "Browse current game information and practical guides.",
+    "eyebrow": "INDEPENDENT PLAYER WIKI · OCTOBER 2026",
+    "heading": "Chained Beasts Wiki: Guides and Updates",
+    "lead": "Chained Beasts is Featherweight Games' gladiator action roguelike for 1–4 players, released October 15, 2026. Play alone or in co-op, use weapons and chain physics around arena hazards and manage injuries. The latest developer post confirms three hotfixes; additional balancing and content plans are not yet confirmed live.",
+    "supportingText": "Source-backed answers, practical player guides and current announcement status. Independent fan site, not affiliated with the developer.",
+    "primaryLink": {
+      "slug": "patch-notes",
+      "label": "Read the Latest Hotfix"
+    },
     "secondaryLink": {
-      "label": "Open official game page",
-      "url": "https://store.steampowered.com/app/3569420/"
+      "label": "Official Steam Page",
+      "url": "https://store.steampowered.com/app/3569420/Chained_Beasts/"
     }
   },
   "sections": [
     {
-      "id": "start-here",
-      "heading": "Game information",
+      "id": "game-overview",
+      "heading": "What Is Chained Beasts?",
       "paragraphs": [
-        "Current Chained Beasts guides and reference information will be published here."
+        "Developed and published by Featherweight Games, Chained Beasts combines linked gladiator combat with roguelike runs. Its defining mechanical idea is the chain between fighters: coordinated partners can trip enemies, while poor coordination can tangle the group around a pillar.",
+        "The Steam listing confirms Windows and macOS versions, single-player, online co-op, local shared-screen co-op and cross-platform multiplayer features. The developer's September announcement also named PlayStation 5, Xbox/Game Pass and Nintendo Switch for launch; specific store availability and all crossplay platform pairs require their own verification.",
+        "The official October 15 release post describes nine battles across three acts leading to a final encounter, ten difficulty levels, eight beasts, more than 70 skills and afflictions, and over 40 items. These counts are developer claims rather than independently audited catalogs."
+      ],
+      "table": {
+        "caption": "Chained Beasts quick facts",
+        "columns": [
+          "Detail",
+          "Developer / Steam information"
+        ],
+        "rows": [
+          [
+            "Developer and publisher",
+            "Featherweight Games"
+          ],
+          [
+            "Release date",
+            "October 15, 2026"
+          ],
+          [
+            "Player count",
+            "1–4"
+          ],
+          [
+            "Core modes",
+            "Solo, online co-op and couch co-op"
+          ],
+          [
+            "Gameplay",
+            "Arena battles, chain teamwork, hazards, injuries"
+          ],
+          [
+            "Main listing",
+            "Steam for Windows and macOS"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "latest-patch",
+      "heading": "Latest Patch Notes and Upcoming Changes",
+      "paragraphs": [
+        "The newest studio announcement available at this October 20 review confirms fixes to certain host-only multiplayer achievement awards, an offline startup splash-screen freeze and Twitch polls that sometimes failed to close.",
+        "A different section of the same announcement plans slightly easier solo difficulty and somewhat harder multiplayer difficulty excluding the final boss. November meta progression improvements and December Update 1.1 with alternate Rome content are also plans—not the three shipped bug fixes.",
+        "For current details and a clearly labeled release-status comparison, go to the dedicated patch notes page rather than confusing an announced roadmap item with an installed feature."
+      ],
+      "table": {
+        "caption": "Official status as of the Oct 19–20 announcement",
+        "columns": [
+          "Status",
+          "Item"
+        ],
+        "rows": [
+          [
+            "FIXED",
+            "Certain multiplayer achievement credit, offline startup and Twitch poll issues"
+          ],
+          [
+            "PLANNED",
+            "Solo/multiplayer balancing later in launch week"
+          ],
+          [
+            "PLANNED",
+            "November unlock variety and meta progression"
+          ],
+          [
+            "PLANNED",
+            "December Update 1.1 alternate Rome act"
+          ]
+        ]
+      },
+      "links": [
+        {
+          "slug": "patch-notes",
+          "label": "Chained Beasts patch notes",
+          "description": "Shipped fixes, upcoming patches and official announcement timeline"
+        }
+      ]
+    },
+    {
+      "id": "guide-index",
+      "heading": "Start Here: Five Essential Guides",
+      "paragraphs": [
+        "Each guide addresses one player problem. This hub gives short explanations and links to the detailed answer so the homepage does not compete with its own dedicated long-tail pages.",
+        "Choose beginner advice if you are planning the first encounter; crossplay if you are trying to form a group; solo if you want to play alone; afflictions if you are considering recovery or surgery; and patch notes if an update might change what you expected."
+      ],
+      "links": [
+        {
+          "slug": "patch-notes",
+          "label": "Patch Notes",
+          "description": "Three shipped hotfixes and a clearly separated roadmap"
+        },
+        {
+          "slug": "beginner-guide",
+          "label": "Beginner Guide",
+          "description": "First-run chain, weapon, hazard and recovery decisions"
+        },
+        {
+          "slug": "crossplay",
+          "label": "Crossplay and Multiplayer",
+          "description": "Official support versus platform-pair questions"
+        },
+        {
+          "slug": "solo-guide",
+          "label": "Solo Guide",
+          "description": "Official solo play and announced difficulty changes"
+        },
+        {
+          "slug": "afflictions",
+          "label": "Afflictions and Surgeon",
+          "description": "Developer-confirmed treatment concepts and choice framework"
+        }
+      ]
+    },
+    {
+      "id": "arena",
+      "heading": "The Arena Loop and What Players Should Watch",
+      "paragraphs": [
+        "The official gameplay pitch encourages creative environmental combat. Weapons can be thrown, but the studio advises keeping another on hand; spikes, pits and other objects can turn the arena into a hazard for careless fighters.",
+        "Chains reward coordinated positioning in co-op, and the studio explicitly notes how easy it is to get tangled around pillars. Communication is therefore a practical beginner consideration, not a fictional skill bonus.",
+        "The launch version includes progression, items, skills and afflictions, but no trustworthy universal 'best' weapon or healing percentage is provided in the cited source material. Players should read their current in-game descriptions and compare options for the encounter they actually face.",
+        "Solo players can still fight without three friends. A future balance announcement promises to adjust solo difficulty, but the October news alone does not make that modification live.",
+        "The dedicated guides turn these confirmed features into practical checklists and decision tables, while stating clearly where newer game recordings would be required to claim exact effects."
+      ],
+      "links": [
+        {
+          "slug": "beginner-guide",
+          "label": "First-run combat tips",
+          "description": "Plan one safer encounter"
+        },
+        {
+          "slug": "afflictions",
+          "label": "Healing choices",
+          "description": "Decide whether a remedy's costs are worthwhile"
+        }
+      ]
+    },
+    {
+      "id": "official",
+      "heading": "Official Sources, Dates and Independence",
+      "paragraphs": [
+        "Official primary sources are Featherweight Games' Steam store page, its October 15 full-launch news and the October 19–20 hotfix announcement. Its September press release supplies additional announced platforms.",
+        "This guide was reviewed October 20, 2026; the date does not mean automatic real-time updates. Players should check newer official news before relying on the release status of planned features.",
+        "Independent fan-made guide. Not affiliated with Featherweight Games or Valve. This site does not provide game downloads, pirated builds, unauthorized playable embeds or impersonated official support."
       ]
     }
   ],
-  "faq": [],
+  "faq": [
+    {
+      "question": "When did Chained Beasts release?",
+      "answer": "October 15, 2026, according to its Steam store."
+    },
+    {
+      "question": "Does it support single player?",
+      "answer": "Yes. The developer explicitly confirms solo play."
+    },
+    {
+      "question": "Can I play Chained Beasts with friends on other platforms?",
+      "answer": "Online crossplay is officially supported as a feature, but exact platform pairings need platform-specific confirmation."
+    },
+    {
+      "question": "Are the new difficulty changes already active?",
+      "answer": "The October news describes those balancing changes as planned, separate from the three released fixes."
+    },
+    {
+      "question": "How many afflictions are there?",
+      "answer": "The developer describes more than 70 at launch; see the dedicated afflictions guide for confirmed details."
+    }
+  ],
   "screenshots": [],
   "lastReviewed": "2026-10-20"
 }
