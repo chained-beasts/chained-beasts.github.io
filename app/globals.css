@@ -529,3 +529,53 @@ html[data-skin="horror"] .skin-article-hero { border: 0; min-height: 28vh; }
   .skin-nav { display: none; width: 100%; }
   .skin-nav.is-open { display: flex; flex-direction: column; padding-bottom: .8rem; }
 }
+
+/* Focused guide cards and site footer typography for the Horror skin. */
+body[data-fixed-template="horror"] .cb-footer .cb-footer-title {
+  margin: 0 0 12px;
+  max-width: none;
+  color: #f1eee7;
+  font: 700 23px/1.25 Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em;
+}
+body[data-fixed-template="horror"] .section .cards .card,
+body[data-fixed-template="horror"] .section .cards .card:first-child {
+  min-height: 0;
+  padding: 20px 22px 22px;
+}
+body[data-fixed-template="horror"] .section .cards .card a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+}
+body[data-fixed-template="horror"] .section .cards .card h3 {
+  margin: 15px 0 9px;
+  font-size: clamp(22px, 2.2vw, 27px);
+  line-height: 1.17;
+}
+body[data-fixed-template="horror"] .section .cards .card p {
+  margin: 0;
+  max-width: none;
+  color: #d1c5be;
+  font: 15px/1.65 Arial, sans-serif;
+  overflow-wrap: anywhere;
+}
+body[data-fixed-template="horror"] .section .cards .card:hover,
+body[data-fixed-template="horror"] .section .cards .card:focus-within {
+  border-color: #ad4444;
+  background: #211717;
+}
+body[data-fixed-template="horror"] .section .cards .card a:focus-visible {
+  outline: 2px solid #f6b7b7;
+  outline-offset: 5px;
+}
+@media (max-width: 760px) {
+  body[data-fixed-template="horror"] .section .cards .card,
+  body[data-fixed-template="horror"] .section .cards .card:first-child {
+    padding: 18px 19px 20px;
+  }
+  body[data-fixed-template="horror"] .section .cards .card h3 {
+    margin-top: 12px;
+  }
+}

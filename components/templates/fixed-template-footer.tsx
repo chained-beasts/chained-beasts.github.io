@@ -8,7 +8,7 @@ export function FixedTemplateFooter() {
     <footer className="cb-footer" aria-label="Site footer">
       <div className="wrap cb-footer-grid">
         <div>
-          <h2>{siteConfig.siteName}</h2>
+          <p className="cb-footer-title">{siteConfig.siteName}</p>
           <p>Independent fan-made guide. Not affiliated with Featherweight Games or Valve. No game downloads or official support impersonation.</p>
           <p>Reviewed October 20, 2026. Verify later changes against the developer&apos;s announcements.</p>
         </div>

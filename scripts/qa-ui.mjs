@@ -55,6 +55,14 @@ try{
           brokenImages:[...document.images].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.getAttribute("src")),
           tables:document.querySelectorAll(".cb-table").length,
           contentChars:document.body.innerText.length,
+          footerHeadingCount:footer?.querySelectorAll("h1,h2,h3,h4,h5,h6").length ?? -1,
+          footerTitle:footer?.querySelector(".cb-footer-title")?.textContent?.trim()||"",
+          cardSummaries:[...document.querySelectorAll(".section .cards .card")].map(card=>({
+            heading:card.querySelector("h3")?.textContent?.trim()||"",
+            excerpt:card.querySelector("p")?.textContent?.trim()||"",
+            cardHeight:Math.round(card.getBoundingClientRect().height),
+            url:card.querySelector("a")?.getAttribute("href")||""
+          })),
           lang:document.documentElement.lang
         };
       });
@@ -62,6 +70,18 @@ try{
       assert.equal(data.h1,1,contextLabel+" H1");
       assert.equal(data.main,1,contextLabel+" main landmark");
       assert.equal(data.footer,1,contextLabel+" footer count");
+      assert.equal(data.footerHeadingCount,0,contextLabel+" footer must not contain article headings");
+      assert.equal(data.footerTitle,"Chained Beasts Wiki",contextLabel+" footer brand text");
+      if(route==="/"){
+        assert.equal(data.cardSummaries.length,5,contextLabel+" exactly five primary guide cards");
+        for(const card of data.cardSummaries){
+          assert.ok(card.heading.length>3,contextLabel+" card heading");
+          assert.ok(card.excerpt.length>=70,contextLabel+" card excerpt too short: "+card.heading);
+          assert.notEqual(card.heading.toLowerCase(),card.excerpt.toLowerCase(),contextLabel+" duplicated title: "+card.heading);
+          assert.ok(card.cardHeight<300,contextLabel+" oversized guide card: "+card.heading+" height="+card.cardHeight);
+          assert.ok(routes.includes(card.url),contextLabel+" invalid card link "+card.url);
+        }
+      }
       assert.ok(data.faqBeforeFooter&&data.mainBeforeFooter,contextLabel+" footer must be after FAQ and main");
       assert.ok(data.width<=data.viewport+3,contextLabel+" horizontal overflow "+data.width+"/"+data.viewport);
       assert.ok(data.title.length>8&&data.title.length<=60,contextLabel+" title");

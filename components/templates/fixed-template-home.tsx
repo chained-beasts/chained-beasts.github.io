@@ -19,10 +19,18 @@ export function FixedTemplateHome({ home }: { home: HomePageDefinition }) {
   const links: InternalLink[] = visibleCorePages
     .filter((page) => page.slug.replace(/^\/+|\/+$/g, ""))
     .map((page) => ({ slug: page.slug, label: page.navLabel }));
-  const entries = links.slice(0, 6).map((link) => ({
-    href: routePath(link.slug),
-    title: link.label,
-    text: link.label,
+  // Each card offers a brief, distinct answer before sending readers to its focused guide.
+  const guideSummaries: Record<string, string> = {
+    "patch-notes": "Three confirmed October hotfixes, plus upcoming balance changes and the November–December roadmap.",
+    "beginner-guide": "Get started with chain positioning, safer weapon throws, arena hazards, and recovery decisions.",
+    "crossplay": "Online crossplay supports 1–4 players. Understand local co-op and what platform pairings remain unconfirmed.",
+    "solo-guide": "Yes, you can play solo. Learn practical tactics and check the status of planned difficulty balancing.",
+    "afflictions": "Understand 70+ afflictions, the Surgeon, and healing trade-offs without speculative cure rates.",
+  };
+  const entries = visibleCorePages.slice(0, 6).map((page) => ({
+    href: routePath(page.slug),
+    title: page.navLabel,
+    text: guideSummaries[page.slug] ?? page.description,
   }));
   const rendered = renderFixedDocument({
     skin,
