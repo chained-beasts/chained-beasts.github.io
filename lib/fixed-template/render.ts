@@ -16,10 +16,12 @@ function safeAttr(value: string) { return esc(value).replace(/'/g,"&#39;"); }
 function slugOnly(value: string) { return value.replace(/^\/+|\/+$/g, ""); }
 
 export function templateNavLinks(nav: TemplateLink[], page: "home" | "inner", currentSlug?: string | null): string {
-  return nav.filter((item)=>slugOnly(item.slug)).map((item)=>{
-    const active = page === "inner" && currentSlug && slugOnly(item.slug) === slugOnly(currentSlug);
-    return `<a class="nav-link${active ? " active" : ""}" data-nav href="${safeAttr(item.href)}">${esc(item.label)}</a>`;
+  const homeLink = `<a class="nav-link${page==="home"?" active":""}" data-nav href="/">Home</a>`;
+  const children = nav.filter(item=>slugOnly(item.slug)).map(item=>{
+    const active=page==="inner" && currentSlug && slugOnly(item.slug)===slugOnly(currentSlug);
+    return `<a class="nav-link${active?" active":""}" data-nav href="${safeAttr(item.href)}">${esc(item.label)}</a>`;
   }).join("");
+  return homeLink+children;
 }
 
 function firstLetter(gameName: string) { return esc((gameName.trim()[0] || "G").toUpperCase()); }
