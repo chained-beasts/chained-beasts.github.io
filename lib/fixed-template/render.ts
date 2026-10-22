@@ -132,6 +132,46 @@ function replaceArticleBody(html:string,articleHtml:string):string{
 }
 function insertSupplement(html:string,supplement:string){if(html.includes("</main>"))return html.replace("</main>",`${supplement}</main>`);if(html.includes("<footer"))return html.replace("<footer",`${supplement}<footer`);return html.replace("</body>",`${supplement}</body>`)}
 
+const bannerAdMarkup = '<div class="cb-ad cb-ad-banner" data-adsterra-banner-slot role="complementary" aria-label="Advertisement"><span class="cb-ad-label">Advertisement</span><div class="cb-ad-banner-frame" data-adsterra-banner-frame></div></div>';
+const nativeAdMarkup = '<div class="cb-ad cb-ad-native" data-adsterra-native-slot role="complementary" aria-label="Advertisement"><span class="cb-ad-label">Advertisement</span><div data-adsterra-native-mount></div></div>';
+
+/** Insert ad slots at existing content boundaries; do not rewrite or reorder SEO copy. */
+function insertAdSlots(html: string, page: "home" | "inner"): string {
+  if (page === "home") {
+    const heroStart = html.indexOf('<section class="hero">');
+    if (heroStart < 0) throw new Error("Home hero marker missing for banner");
+    const heroEnd = html.indexOf("</section>", heroStart);
+    if (heroEnd < 0) throw new Error("Home hero closing tag missing");
+    html = html.slice(0, heroEnd + 10) + bannerAdMarkup + html.slice(heroEnd + 10);
+    // The existing five-guide navigation grid is the first complete content component.
+    const guideStart = html.indexOf('<section class="section">', heroEnd + 10);
+    if (guideStart < 0) throw new Error("Home guide cards missing for native placement");
+    const guideEnd = html.indexOf("</section>", guideStart);
+    if (guideEnd < 0) throw new Error("Home guide section closing tag missing");
+    return html.slice(0, guideEnd + 10) + nativeAdMarkup + html.slice(guideEnd + 10);
+  }
+  const articleStart = html.indexOf('<article class="template-inner-article">');
+  if (articleStart < 0) throw new Error("Inner article missing for banner");
+  const status = html.indexOf('<p class="cb-status">', articleStart);
+  const lead = html.indexOf('<p class="lead">', articleStart);
+  const introStart = status >= 0 ? status : lead;
+  if (introStart < 0) throw new Error("Inner intro missing for banner");
+  const introEnd = html.indexOf("</p>", introStart);
+  if (introEnd < 0) throw new Error("Inner intro closing tag missing");
+  html = html.slice(0, introEnd + 4) + bannerAdMarkup + html.slice(introEnd + 4);
+  // First existing complete paragraph under the first H2: a genuine content gap.
+  const contentStart = html.indexOf('<div class="cb-content">', introEnd + 4);
+  const firstSection = html.indexOf("<section ", contentStart);
+  const nextPara = html.indexOf("<p>", firstSection);
+  const sectionEnd = html.indexOf("</section>", firstSection);
+  if (contentStart < 0 || firstSection < 0 || nextPara < 0 || (sectionEnd >= 0 && nextPara > sectionEnd)) {
+    throw new Error("First existing guide paragraph missing for native placement");
+  }
+  const paraEnd = html.indexOf("</p>", nextPara);
+  if (paraEnd < 0) throw new Error("First guide paragraph has no closing tag");
+  return html.slice(0, paraEnd + 4) + nativeAdMarkup + html.slice(paraEnd + 4);
+}
+
 export function renderFixedTemplate(input:FixedTemplateInput):string{
   const {pack,html:source}=templateSource(input.skin,input.page); const paint=resolveAccent(pack.skin,input.accentColorId);
   const currentLabel=input.page==="inner"?(input.nav.find(x=>slugOnly(x.slug)===slugOnly(input.currentSlug||""))?.label||input.heading||"Guide"):null;
@@ -149,6 +189,7 @@ export function renderFixedTemplate(input:FixedTemplateInput):string{
   html=html.replace(/--accent:#[0-9A-Fa-f]{6}/,`--accent:${paint.textAccent}`);
   html=html.replace("</style>",`${accentOverrideCss(pack.skin,paint)}</style>`);
   if(!/<body[^>]*data-template=/.test(html))html=html.replace(/<body([^>]*)>/,`<body$1 data-template="${pack.specId.replace(/^\d+-/,"")}">`);
+  if (input.page === "home" ? Boolean(input.supplementHtml) : Boolean(input.articleHtml)) html = insertAdSlots(html, input.page);
   return html;
 }
 

@@ -31,6 +31,11 @@ try{
     const context=await browser.newContext({viewport:{width,height:900},deviceScaleFactor:1,colorScheme:"dark"});
     for(const route of routes){
       const page=await context.newPage();
+      const adRequests=[];
+      await page.route("https://bauval.org/**",async route=>{
+        adRequests.push(route.request().url());
+        await route.fulfill({status:200,contentType:"application/javascript",body:""});
+      });
       const errors=[];
       page.on("pageerror",error=>errors.push(error.message));
       const response=await page.goto(base+route,{waitUntil:"load",timeout:30000});
@@ -66,7 +71,64 @@ try{
           lang:document.documentElement.lang
         };
       });
+      await page.waitForFunction(()=>
+        document.querySelectorAll("[data-adsterra-banner-slot] iframe").length===1 &&
+        document.querySelectorAll("[data-adsterra-native-slot] script").length===1 &&
+        document.querySelectorAll('script[src="https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6"]').length===1
+      ,{timeout:15000});
+      const ads=await page.evaluate(()=>{
+        const banner=document.querySelector("[data-adsterra-banner-slot]");
+        const native=document.querySelector("[data-adsterra-native-slot]");
+        const frame=banner?.querySelector("iframe");
+        const main=document.querySelector("main");
+        const hero=document.querySelector("section.hero");
+        const status=document.querySelector(".template-inner-article .cb-status");
+        const firstPara=document.querySelector(".template-inner-article .cb-content > section p");
+        const guides=document.querySelector("section.section");
+        const mobile=window.innerWidth<768;
+        return {
+          banners:document.querySelectorAll("[data-adsterra-banner-slot]").length,
+          natives:document.querySelectorAll("[data-adsterra-native-slot]").length,
+          socialScripts:document.querySelectorAll('script[src="https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6"]').length,
+          nativeScripts:document.querySelectorAll('script[src="https://bauval.org/21/45a476f43739d044399f66b49b0101e4"]').length,
+          frameType:frame?.getAttribute("data-banner-variant"),
+          frameSrcdoc:frame?.getAttribute("srcdoc")||"",
+          frameWidth:frame?.getAttribute("width"),
+          frameHeight:frame?.getAttribute("height"),
+          orderOnHome:Boolean(hero&&guides&&banner&&native&&
+            (hero.compareDocumentPosition(banner)&Node.DOCUMENT_POSITION_FOLLOWING)&&
+            (banner.compareDocumentPosition(guides)&Node.DOCUMENT_POSITION_FOLLOWING)&&
+            (guides.compareDocumentPosition(native)&Node.DOCUMENT_POSITION_FOLLOWING)),
+          orderOnInner:Boolean(status&&firstPara&&banner&&native&&
+            (status.compareDocumentPosition(banner)&Node.DOCUMENT_POSITION_FOLLOWING)&&
+            (banner.compareDocumentPosition(firstPara)&Node.DOCUMENT_POSITION_FOLLOWING)&&
+            (firstPara.compareDocumentPosition(native)&Node.DOCUMENT_POSITION_FOLLOWING)),
+          mainContainsBoth:Boolean(main?.contains(banner)&&main?.contains(native)),
+          textUnchanged:!document.querySelector("[data-adsterra-native-slot] h1,[data-adsterra-banner-slot] h1"),
+          mobile
+        };
+      });
+      const expectedMobile="https://bauval.org/22/e840a64487e7f06b64f620a74ea2cb92";
+      const expectedDesktop="https://bauval.org/22/86170cbce6d0ab83964c5231ab0f2d52";
       const contextLabel=width+"px "+route;
+      assert.equal(ads.banners,1,contextLabel+" banner count");
+      assert.equal(ads.natives,1,contextLabel+" native count");
+      assert.equal(ads.socialScripts,1,contextLabel+" social singleton");
+      assert.equal(ads.nativeScripts,1,contextLabel+" native script singleton");
+      assert.equal(ads.frameType,width<768?"mobile":"desktop",contextLabel+" banner variant");
+      assert.equal(ads.frameWidth,width<768?"320":"728",contextLabel+" banner width");
+      assert.equal(ads.frameHeight,width<768?"50":"90",contextLabel+" banner height");
+      assert.ok(ads.frameSrcdoc.includes(width<768?expectedMobile:expectedDesktop),contextLabel+" official banner GET CODE");
+      assert.ok(!ads.frameSrcdoc.includes(width<768?expectedDesktop:expectedMobile),contextLabel+" banner wrong device script");
+      assert.ok(ads.mainContainsBoth,contextLabel+" ads should stay inside main");
+      assert.ok(route==="/"?ads.orderOnHome:ads.orderOnInner,contextLabel+" ad placement order");
+      assert.ok(ads.textUnchanged,contextLabel+" ad must not add SEO heading");
+      for(const src of [width<768?expectedMobile:expectedDesktop,
+        "https://bauval.org/21/45a476f43739d044399f66b49b0101e4",
+        "https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6"]){
+        assert.equal(adRequests.filter(s=>s===src).length,1,contextLabel+" exactly one ad request: "+src);
+      }
+      assert.equal(adRequests.filter(s=>s===(width<768?expectedDesktop:expectedMobile)).length,0,contextLabel+" no other banner request");
       assert.equal(data.h1,1,contextLabel+" H1");
       assert.equal(data.main,1,contextLabel+" main landmark");
       assert.equal(data.footer,1,contextLabel+" footer count");

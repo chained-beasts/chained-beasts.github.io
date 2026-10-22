@@ -579,3 +579,48 @@ body[data-fixed-template="horror"] .section .cards .card a:focus-visible {
     margin-top: 12px;
   }
 }
+
+/* Adsterra units: only outer slot styling; never style third-party creative content. */
+body[data-fixed-template="horror"] .cb-ad {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 22px auto;
+  text-align: center;
+  clear: both;
+}
+body[data-fixed-template="horror"] .cb-ad-label {
+  display: block;
+  color: #a99d98;
+  font: 10px/1.5 Arial, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+body[data-fixed-template="horror"] .cb-ad-banner-frame {
+  min-height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+body[data-fixed-template="horror"] .cb-ad-native {
+  padding: 15px 12px;
+  border-top: 1px solid #483430;
+  border-bottom: 1px solid #483430;
+  background: #130e0e;
+  overflow-wrap: anywhere;
+}
+body[data-fixed-template="horror"] [data-adsterra-native-mount] {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+@media (max-width: 767px) {
+  body[data-fixed-template="horror"] .cb-ad-banner-frame { min-height: 50px; }
+  body[data-fixed-template="horror"] .cb-ad {
+    margin-top: 17px;
+    margin-bottom: 17px;
+  }
+}
