@@ -27,7 +27,8 @@ function initializeBanner(slot: HTMLElement, desktop: boolean) {
   iframe.setAttribute("title", "Advertisement");
   iframe.setAttribute("data-banner-variant", type);
   iframe.setAttribute("scrolling", "no");
-  iframe.setAttribute("sandbox", "allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms");
+  // This ad network's external loader needs a normal iframe origin: an opaque
+  // sandbox blocks the external GET CODE request in Chromium.
   iframe.width = String(width);
   iframe.height = String(height);
   iframe.style.display = "block";
