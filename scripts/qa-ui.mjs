@@ -123,6 +123,9 @@ try{
       assert.ok(ads.mainContainsBoth,contextLabel+" ads should stay inside main");
       assert.ok(route==="/"?ads.orderOnHome:ads.orderOnInner,contextLabel+" ad placement order");
       assert.ok(ads.textUnchanged,contextLabel+" ad must not add SEO heading");
+      // External scripts and srcdoc frames may finish after React has created their nodes.
+      for(let tick=0;tick<25&&adRequests.length<3;tick++) await page.waitForTimeout(160);
+      console.log("AD_REQUESTS",contextLabel,JSON.stringify(adRequests));
       for(const src of [width<768?expectedMobile:expectedDesktop,
         "https://bauval.org/21/45a476f43739d044399f66b49b0101e4",
         "https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6"]){
