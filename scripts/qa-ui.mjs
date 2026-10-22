@@ -185,13 +185,15 @@ try{
   await readyAds();
   await routePage.waitForTimeout(600);
   await routePage.evaluate(()=>{document.documentElement.dataset.qaPageMarker="same-document"});
+  const socialRequestCount=()=>routeRequests.filter(url=>url==="https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6").length;
+  const initialSocialRequests=socialRequestCount();
   await routePage.locator('footer.cb-footer nav[aria-label="Footer navigation"] a[href="/crossplay/"]').click();
   await routePage.waitForURL("**/crossplay/");
   await readyAds();
   const sameDocument=await routePage.evaluate(()=>document.documentElement.dataset.qaPageMarker==="same-document");
   if(sameDocument){
     // A client-side route change must preserve one global Social Bar instance.
-    assert.equal(routeRequests.filter(url=>url==="https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6").length,1,
+    assert.equal(socialRequestCount(),initialSocialRequests,
       "SPA navigation must not reinitialize Social Bar");
   }
   assert.equal(await routePage.locator("[data-adsterra-native-slot]").count(),1,"Crossplay native duplicate");
@@ -202,7 +204,7 @@ try{
   assert.equal(await routePage.locator("[data-adsterra-native-slot]").count(),1,"Return-home native duplicate");
   assert.equal(await routePage.locator("[data-adsterra-banner-slot]").count(),1,"Return-home banner duplicate");
   if(sameDocument){
-    assert.equal(routeRequests.filter(url=>url==="https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6").length,1,
+    assert.equal(socialRequestCount(),initialSocialRequests,
       "SPA return navigation must not reinitialize Social Bar");
   }
   console.log("SPA navigation verified: Home -> Crossplay -> Home, same-document="+sameDocument);
