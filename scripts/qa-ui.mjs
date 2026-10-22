@@ -125,7 +125,6 @@ try{
       assert.ok(ads.textUnchanged,contextLabel+" ad must not add SEO heading");
       // External scripts and srcdoc frames may finish after React has created their nodes.
       for(let tick=0;tick<25&&adRequests.length<3;tick++) await page.waitForTimeout(160);
-      console.log("AD_REQUESTS",contextLabel,JSON.stringify(adRequests));
       for(const src of [width<768?expectedMobile:expectedDesktop,
         "https://bauval.org/21/45a476f43739d044399f66b49b0101e4",
         "https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6"]){
@@ -169,6 +168,45 @@ try{
     }
     await context.close();
   }
+  // Exercise actual Next.js client links, not just independent page reloads.
+  const routeContext=await browser.newContext({viewport:{width:375,height:900},deviceScaleFactor:1});
+  const routePage=await routeContext.newPage();
+  const routeRequests=[];
+  await routePage.route("https://bauval.org/**",async r=>{
+    routeRequests.push(r.request.url);
+    await r.fulfill({status:200,contentType:"application/javascript",body:""});
+  });
+  const readyAds=()=>routePage.waitForFunction(()=>
+    document.querySelectorAll("[data-adsterra-banner-slot] iframe").length===1 &&
+    document.querySelectorAll("[data-adsterra-native-slot] script").length===1 &&
+    document.querySelectorAll('script[src="https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6"]').length===1
+  );
+  await routePage.goto(base+"/",{waitUntil:"load"});
+  await readyAds();
+  await routePage.waitForTimeout(600);
+  await routePage.evaluate(()=>{document.documentElement.dataset.qaPageMarker="same-document"});
+  await routePage.locator('footer.cb-footer nav[aria-label="Footer navigation"] a[href="/crossplay/"]').click();
+  await routePage.waitForURL("**/crossplay/");
+  await readyAds();
+  const sameDocument=await routePage.evaluate(()=>document.documentElement.dataset.qaPageMarker==="same-document");
+  if(sameDocument){
+    // A client-side route change must preserve one global Social Bar instance.
+    assert.equal(routeRequests.filter(url=>url==="https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6").length,1,
+      "SPA navigation must not reinitialize Social Bar");
+  }
+  assert.equal(await routePage.locator("[data-adsterra-native-slot]").count(),1,"Crossplay native duplicate");
+  assert.equal(await routePage.locator("[data-adsterra-banner-slot]").count(),1,"Crossplay banner duplicate");
+  await routePage.locator('footer.cb-footer nav[aria-label="Footer navigation"] a[href="/"]').click();
+  await routePage.waitForURL(base+"/");
+  await readyAds();
+  assert.equal(await routePage.locator("[data-adsterra-native-slot]").count(),1,"Return-home native duplicate");
+  assert.equal(await routePage.locator("[data-adsterra-banner-slot]").count(),1,"Return-home banner duplicate");
+  if(sameDocument){
+    assert.equal(routeRequests.filter(url=>url==="https://bauval.org/14/743c92d8ec9827850a3d2fe87040eac6").length,1,
+      "SPA return navigation must not reinitialize Social Bar");
+  }
+  console.log("SPA navigation verified: Home -> Crossplay -> Home, same-document="+sameDocument);
+  await routeContext.close();
   console.log("UI verified:",count,"viewport/page combinations",widths);
 } finally{
   if(browser)await browser.close();
